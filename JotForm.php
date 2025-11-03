@@ -23,7 +23,7 @@ class JotForm {
         $this->outputType = strtolower($outputType);
         $user = $this->getUser();
         # set base url for EU users
-        if (isset($user['euOnly'])) {
+        if (isset($user['euOnly']) && !empty($user['euOnly'])) {
             $this->baseURL = 'https://eu-api.jotform.com';
         }
     }
